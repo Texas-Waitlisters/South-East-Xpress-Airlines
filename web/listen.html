@@ -19,18 +19,18 @@
 
 				<!-- Header -->
 					<header id="header">
-						<a href="welcome.html" class="logo">Southeastern Xpress Airlines</a>
+						<span class="logo">Southeastern Xpress Airlines</span>
 					</header>
 
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li><a href="watch.html"><span class="icon">📺</span> WATCH</a></li>
-							<li class="active"><a href="listen.html"><span class="icon">🎵</span> LISTEN</a></li>
-							<li><a href="play.html"><span class="icon">🎮</span> PLAY</a></li>
-							<li><a href="explore.html"><span class="icon">🌐</span> EXPLORE</a></li>
-							<li><a href="flight.html"><span class="icon">✈</span> THIS FLIGHT</a></li>
-							<li><a href="order.html"><span class="icon">🛒</span>ORDER</a></li>
+							<li><a id="watch"><span class="icon">📺</span> WATCH</a></li>
+							<li><a id="listen"><span class="icon">🎵</span> LISTEN</a></li>
+							<li><a id="play"><span class="icon">🎮</span> PLAY</a></li>
+							<li><a id="explore"><span class="icon">🌐</span> EXPLORE</a></li>
+							<li><a id="flight"><span class="icon">✈</span> THIS FLIGHT</a></li>
+							<li><a id="order"><span class="icon">🛒</span>ORDER</a></li>
 						</ul>
 						
 					</nav>
@@ -68,6 +68,19 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script> 
+				$(document).ready(function(){
+					var seatNum = window.location.href.substring(window.location.href.indexOf("?")+1);
+					// $("#seat-num").text(seatNum);
+
+					$("#watch").attr("href", "watch.html?" + seatNum);
+					$("#listen").attr("href", "listen.html?" + seatNum);
+					$("#play").attr("href", "play.html?" + seatNum);
+					$("#explore").attr("href", "explore.html?" + seatNum);
+					$("#flight").attr("href", "flight.html?" + seatNum);
+					$("#order").attr("href", "order.html?" + seatNum);
+				})
+			</script>
 
 	</body>
 </html>
