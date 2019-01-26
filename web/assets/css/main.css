@@ -3488,7 +3488,7 @@ input, select, textarea {
 		-webkit-user-select: none;
 		-ms-user-select: none;
 		user-select: none;
-		height: 20rem;
+		height: 20vh;
 		padding-bottom: 8rem;
 		position: relative;
 		text-align: center;
@@ -3544,7 +3544,7 @@ input, select, textarea {
 			font-weight: 900;
 			letter-spacing: 0.075em;
 			line-height: 1;
-			padding: 1rem 1.75rem;
+			padding: 0.5rem 0.5rem;
 			text-transform: uppercase;
 			visibility: visible;
 		}
@@ -3591,7 +3591,7 @@ input, select, textarea {
 		background: rgba(255, 255, 255, 0.175);
 		height: 4rem;
 		line-height: 4rem;
-		margin: -4rem auto 0 auto;
+		margin: -6rem auto 0 auto;
 		overflow: hidden;
 		padding: 0 2rem 0 0;
 		position: relative;
@@ -3732,6 +3732,7 @@ input, select, textarea {
 		background-color: #ffffff;
 		position: relative;
 		margin: 0 auto;
+		height: 80vh;
 		width: calc(100% - 4rem);
 		max-width: 72rem;
 		z-index: 2;
