@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Start Your Order | Foobar Airlines</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="assets/js/google_script_form.js"></script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Massively</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">This is Massively</a></li>
+							<li class="active"><a href="generic.html">Order</a></li>
+							<li><a href="elements.html">Elements Reference</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>Start Your Order</h1>
+									<p>Global food brought to you by our team of chefs with meals prepared daily for each flight.</p>
+								</header>
+								<div class="image main"><img src="images/yogurt.jpg" alt="" /></div>
+							</section>
+
+							<section> <!-- FORM WITH ORDER SUB INFO -->
+
+								<form id="test-form">
+
+							  <div>
+							    <label>Seat Number</label>
+									<input type="text" name="seat_num" id="randSeat" value="" maxlength="4">
+							  </div>
+
+							  <div>
+							    <label>Menu Item</label>
+							    <input type="text" name="menu_item" id="menuItem" placeholder="Field 2"/>
+							  </div>
+
+							  <div>
+							    <button type="submit"id="submit-form">Submit</button>
+							  </div>
+
+							</form>
+							</section>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Foobar Airlines</li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<!-- <script src="assets/js/jquery.min.js"></script> -->
+
+			<script> // Post Form to Google Sheets
+			  const scriptURL = 'https://script.google.com/macros/s/AKfycbzkof_KDcyJp0HoXMhH29hvYOt4UTTfohqhMBzxsBRGZtYZQQVk/exec'
+			  const form = document.forms['test-form']
+
+			  form.addEventListener('submit', e => {
+			    e.preventDefault()
+			    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+			      .then(response => console.log('Success!', response))
+			      .catch(error => console.error('Error!', error.message))
+			  })
+			</script>
+
+			<script> // Random Seat Generator
+				function randomNumber(len) {
+						var letters = ["A", "B", "C", "D", "E"]; // array of seat positions
+				    var randomNumber;
+						var randLetter = letters[Math.floor(Math.random()*letters.length)]; // pick rand index from arr
+				    var seat = '';
+
+				    for(var count = 0; count < len; count++) {
+				        randomNumber = Math.floor((Math.random() * 40) + 1); // gen number between 1 and 40
+				        seat += randomNumber.toString() + randLetter.toString(); // generate final seat string
+
+				    }
+				    return seat;
+				}
+
+				document.getElementById("randSeat").value = randomNumber(1);
+			</script>
+
+			<script> // Random Menu Item Generator
+				function randomItem() {
+						var menuItems = ["Chorizo breakfast sandwich", "Strawberry almond oats", "Banana bread pudding", "Maple ham breakfast sandwich", "Turkey and mozzarella sandwich", "Pepperoni deep dish pizza", "White cheddar cheeseburger", "Chicken Parmesan sandwich", "Selection cheese tray", "Pesto chicken branch"]; // array of seat positions
+						var randItem = menuItems[Math.floor(Math.random()*menuItems.length)]; // pick rand index from arr
+						return randItem;
+				}
+
+				document.getElementById("menuItem").value = randomItem();
+			</script>
+
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
