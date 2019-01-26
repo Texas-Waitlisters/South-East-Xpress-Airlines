@@ -63,6 +63,12 @@ table {
 	width: 30%;
 	height: 20vh;
 }
+#welcome-grid .icon {
+	font-size: 7vh;
+}
+span.icon {
+	font-size: x-large;
+}
 
 body {
 	-webkit-text-size-adjust: none;

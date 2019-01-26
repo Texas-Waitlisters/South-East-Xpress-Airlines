@@ -25,12 +25,12 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li><a href="watch.html"><span class="icon">📺</span> WATCH</a></li>
-							<li><a href="listen.html"><span class="icon">🎵</span> LISTEN</a></li>
-							<li><a href="play.html"><span class="icon">🎮</span> PLAY</a></li>
-							<li><a href="explore.html"><span class="icon">🌐</span> EXPLORE</a></li>
-							<li><a href="flight.html"><span class="icon">✈</span> THIS FLIGHT</a></li>
-							<li><a href="order.html"><span class="icon">🛒</span>ORDER</a></li>
+							<li><a id="watch"><span class="icon">📺</span> WATCH</a></li>
+							<li><a id="listen"><span class="icon">🎵</span> LISTEN</a></li>
+							<li><a id="play"><span class="icon">🎮</span> PLAY</a></li>
+							<li><a id="explore"><span class="icon">🌐</span> EXPLORE</a></li>
+							<li><a id="flight"><span class="icon">✈</span> THIS FLIGHT</a></li>
+							<li><a id="order"><span class="icon">🛒</span>ORDER</a></li>
 						</ul>
 						
 					</nav>
@@ -41,19 +41,19 @@
 						<!-- Post -->
 							<section class="post">
 								<header class="major">
-									<h1>Welcome Aboard!</h1>
+									<h1>Welcome Aboard, <span id="seat-num"></span></h1>
 								</header>
 
 							<table id="welcome-grid">
 								<tr>
-									<td><button onclick="window.location.href='watch.html'"><span class="icon">📺</span> </br>WATCH</button></td>
-									<td><button onclick="window.location.href='listen.html'"><span class="icon">🎵</span> </br>LISTEN</button></td>
-									<td><button onclick="window.location.href='play.html'"><span class="icon">🎮</span> </br>PLAY</button></td>
+									<td><button id="watch"><span class="icon">📺</span> </br>WATCH</button></td>
+									<td><button id="listen"><span class="icon">🎵</span> </br>LISTEN</button></td>
+									<td><button id="play"><span class="icon">🎮</span> </br>PLAY</button></td>
 								</tr>
 								<tr>
-									<td><button onclick="window.location.href='explore.html'"><span class="icon">🌐</span> </br>EXPLORE</button></td>
-									<td><button onclick="window.location.href='flight.html'"><span class="icon">✈</span> </br>THIS FLIGHT</button></td>
-									<td><button onclick="window.location.href='order.html'"><span class="icon">🛒</span> </br>ORDER</button></td>
+									<td><button id="explore"><span class="icon">🌐</span> </br>EXPLORE</button></td>
+									<td><button id="flight"><span class="icon">✈</span> </br>THIS FLIGHT</button></td>
+									<td><button id="order"><span class="icon">🛒</span> </br>ORDER</button></td>
 								</tr>
 							</table>	
 									
@@ -69,6 +69,26 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script type="application/javascript">
+				$(document).ready(function(){
+					var seatNum = "34D";
+					$("#seat-num").text(seatNum);
+
+					$("#watch").attr("href", "watch.html?" + seatNum);
+					$("#listen").attr("href", "listen.html?" + seatNum);
+					$("#play").attr("href", "play.html?" + seatNum);
+					$("#explore").attr("href", "explore.html?" + seatNum);
+					$("#flight").attr("href", "flight.html?" + seatNum);
+					$("#order").attr("href", "order.html?" + seatNum);
+
+					$('button#watch').click(function(){ window.location.href='watch.html?' + seatNum;});
+					$('button#listen').click(function(){ window.location.href='listen.html?' + seatNum;});
+					$('button#play').click(function(){ window.location.href='play.html?' + seatNum;});
+					$('button#explore').click(function(){ window.location.href='explore.html?' + seatNum;});
+					$('button#flight').click(function(){ window.location.href='flight.html?' + seatNum;});
+					$('button#order').click(function(){ window.location.href='order.html?' + seatNum;});
+				})
+			</script>
 
 	</body>
 </html>
