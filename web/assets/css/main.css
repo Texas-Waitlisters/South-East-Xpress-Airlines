@@ -3254,7 +3254,7 @@ input, select, textarea {
 			height: 100%;
 			background-color: #212931;
 			background-image: url("../../images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/bg.jpg");
-			background-size: auto,								auto,														100% auto;
+			/*background-size: auto,								auto,														100% auto;*/
 			background-position: center,								center,														top center;
 			background-repeat: repeat,								no-repeat,													no-repeat;
 			background-attachment: scroll,								scroll,														scroll;
@@ -3512,7 +3512,7 @@ input, select, textarea {
 /* Header */
 
 	#header {
-		color: #ffffff;
+		color: #f46524;
 		-moz-align-items: center;
 		-webkit-align-items: center;
 		-ms-align-items: center;
@@ -3539,6 +3539,7 @@ input, select, textarea {
 		position: relative;
 		text-align: center;
 		z-index: 2;
+		background-color: #293241;
 	}
 
 		#header input, #header select, #header textarea {
@@ -3583,7 +3584,7 @@ input, select, textarea {
 			transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
 			pointer-events: auto;
 			border-style: solid;
-			border-color: #ffffff;
+			border-color: #98c1d9;
 			border-width: 5px !important;
 			font-family: "Source Sans Pro", Helvetica, sans-serif;
 			font-size: 3vh;
@@ -3774,11 +3775,15 @@ input, select, textarea {
 
 /* Main */
 
+	.noScroll {
+		height: 80vh;
+	}
+
 	#main {
 		background-color: #ffffff;
 		position: relative;
 		margin: 0 auto;
-		height: 80vh;
+		
 		width: calc(100% - 4rem);
 		max-width: 72rem;
 		z-index: 2;
@@ -4697,4 +4702,22 @@ input, select, textarea {
 			visibility: visible;
 		}
 
+	}
+	#tableContainer {
+		padding: 1rem 4rem;
+	}
+	#incomingOrders {
+		width: 50%;
+	}
+	#incomingOrders #itemCol {
+		width:60%;
+	}
+	#incomingOrders #seatCol {
+		width:10%;
+	}
+	#incomingOrders #doneCol {
+		width:30%;
+	}
+	#incomingOrders button {
+		width: 100%;
 	}
