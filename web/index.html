@@ -1,154 +1,216 @@
-</html>
-  <head>
-     <link rel="stylesheet" href="style.css">
-     <link rel="stylesheet" href="grid.css">
-  </head>
-  <body>
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Elements Reference - Massively by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+		#main {
+		height: 100vh;
+	}
+		</style>
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="assets/js/google_script_form.js"></script>
+	</head>
+	<body class="is-preload">
 
-    <div class="col row left">
-      <table style="width:57%;float:right">
-        <tr>
-          <th><button id="10A" class="seat" name="empty" onclick="changeColor('10A')">10A</button></th>
-          <th><button id="10B" class="seat" name="empty" onclick="changeColor('10B')">10B</button></th>
-          <th><button id="10C" class="seat" name="empty" onclick="changeColor('10C')">10C</button></th>
-        </tr>
-        <tr>
-          <th><button id="11A" class="seat" name="empty" onclick="changeColor('11A')">11A</button></th>
-          <th><button id="11B" class="seat" name="empty" onclick="changeColor('11B')">11B</button></th>
-          <th><button id="11C" class="seat" name="empty" onclick="changeColor('11C')">11C</button></th>
-        </tr>
-        <tr>
-          <th><button id="12A" class="seat" name="empty" onclick="changeColor('12A')">12A</button></th>
-          <th><button id="12B" class="seat" name="empty" onclick="changeColor('12B')">12B</button></th>
-          <th><button id="12C" class="seat" name="empty" onclick="changeColor('12C')">12C</button></th>
-        </tr>
-        <tr>
-          <th><button id="13A" class="seat" name="empty" onclick="changeColor('13A')">13A</button></th>
-          <th><button id="13B" class="seat" name="empty" onclick="changeColor('13B')">13B</button></th>
-          <th><button id="13C" class="seat" name="empty" onclick="changeColor('13C')">13C</button></th>
-        </tr>
-        <tr>
-          <th><button id="14A" class="seat" name="empty" onclick="changeColor('14A')">14A</button></th>
-          <th><button id="14B" class="seat" name="empty" onclick="changeColor('14B')">14B</button></th>
-          <th><button id="14C" class="seat" name="empty" onclick="changeColor('14C')">14C</button></th>
-        </tr>
-        <tr>
-          <th><button id="15A" class="seat" name="empty" onclick="changeColor('15A')">15A</button></th>
-          <th><button id="15B" class="seat" name="empty" onclick="changeColor('15B')">15B</button></th>
-          <th><button id="15C" class="seat" name="empty" onclick="changeColor('15C')">15C</button></th>
-        </tr>
-        <tr>
-          <th><button id="16A" class="seat" name="empty" onclick="changeColor('16A')">16A</button></th>
-          <th><button id="16B" class="seat" name="empty" onclick="changeColor('16B')">16B</button></th>
-          <th><button id="16C" class="seat" name="empty" onclick="changeColor('16C')">16C</button></th>
-        </tr>
-        <tr>
-          <th><button id="17A" class="seat" name="empty" onclick="changeColor('17A')">17A</button></th>
-          <th><button id="17B" class="seat" name="empty" onclick="changeColor('17B')">17B</button></th>
-          <th><button id="17C" class="seat" name="empty" onclick="changeColor('17C')">17C</button></th>
-        </tr>
-        <tr>
-          <th><button id="18A" class="seat" name="empty" onclick="changeColor('18A')">18A</button></th>
-          <th><button id="18B" class="seat" name="empty" onclick="changeColor('18B')">18B</button></th>
-          <th><button id="18C" class="seat" name="empty" onclick="changeColor('18C')">18C</button></th>
-        </tr>
-        <tr>
-          <th><button id="19A" class="seat" name="empty" onclick="changeColor('19A')">19A</button></th>
-          <th><button id="19B" class="seat" name="empty" onclick="changeColor('19B')">19B</button></th>
-          <th><button id="19C" class="seat" name="empty" onclick="changeColor('19C')">19C</button></th>
-        </tr>
-        <tr>
-          <th><button id="20A" class="seat" name="empty" onclick="changeColor('20A')">20A</button></th>
-          <th><button id="20B" class="seat" name="empty" onclick="changeColor('20B')">20B</button></th>
-          <th><button id="20C" class="seat" name="empty" onclick="changeColor('20C')">20C</button></th>
-        </tr>
-        <tr>
-          <th><button id="21A" class="seat" name="empty" onclick="changeColor('21A')">21A</button></th>
-          <th><button id="21B" class="seat" name="empty" onclick="changeColor('21B')">21B</button></th>
-          <th><button id="21C" class="seat" name="empty" onclick="changeColor('21C')">21C</button></th>
-        </tr>
-      </table>
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+					<div id="hidden-form">
+						<form id="test-form">
+
+						<div>
+							<label>Seat Number</label>
+							<input type="text" name="seat_num" id="seatNum" value="" maxlength="4">
+						</div>
+
+						<div>
+							<label>Menu Item</label>
+							<input type="text" name="menu_item" id="menuItem" placeholder="Field 2"/>
+						</div>
+
+						<div>
+							<button type="submit"id="submit-order">Submit</button>
+						</div>
+
+					</form>
+				</div>
 
 
-    </div>
+								<!-- Text stuff -->
+									<div class="box alt">
+										<p>Select the most recent movie, TV show, and album you've watched or listened to to confirm your identity.</p>
+										<div class="row gtr-50 gtr-uniform">
+											<!-- MOVIES -->
+											<div class="col-2"><span class="image fit"><img class="zoom" src="images/signin/americanteen.jpg" alt="" id="0" /></div>
+											<div class="col-2"><span class="image fit"><img class="zoom" src="images/signin/astroworld.jpg" alt="" id="1" /></div>
+											<div class="col-2"><span class="image fit"><img class="zoom" src="images/signin/green-album.jpg" alt="" id="2" /></div>
+											<div class="col-2"><span class="image fit"><img class="zoom" src="images/signin/7rings.jpg" alt="" id="3" /></div>
+											<div class="col-2"><span class="image fit"><img class="zoom" src="images/signin/panic.jpg" alt="" id="4" /></div>
+											<div class="col-2"><span class="image fit"><img class="zoom" src="images/signin/shallow.jpg" alt="" id="5" /></div>
+											<!-- TV SHOWS -->
+											<div class="col-2"><span class="image fit"><img class="zoom" src="images/signin/got.jpg" alt="" id="6" /></div>
+											<div class="col-2"><span class="image fit"><img class="zoom" src="images/signin/westworld.jpg" alt="" id="7" /></div>
+											<div class="col-2"><span class="image fit"><img class="zoom" src="images/signin/arresteddev.jpg" alt="" id="8" /></div>
+											<div class="col-2"><span class="image fit"><img class="zoom" src="images/signin/blackmirror.jpg" alt="" id="9" /></div>
+											<div class="col-2"><span class="image fit"><img class="zoom" src="images/signin/strangerthings.jpg" alt="" id="10" /></div>
+											<div class="col-2"><span class="image fit"><img class="zoom" src="images/signin/theoffice.jpg" alt="" id="11" /></div>
+											<!-- MUSIC -->
+											<div class="col-2"><span class="image fit"><img class="zoom" src="images/signin/spiderverse.jpg" alt="" id="12" /></div>
+											<div class="col-2"><span class="image fit"><img class="zoom" src="images/signin/bohemian.jpg" alt="" id="13" /></div>
+											<div class="col-2"><span class="image fit"><img class="zoom" src="images/signin/greenbook.jpg" alt="" id="14" /></div>
+											<div class="col-2"><span class="image fit"><img class="zoom" src="images/signin/blackkklansmen.jpg" alt="" id="15" /></div>
+											<div class="col-2"><span class="image fit"><img class="zoom" src="images/signin/incredibles2.jpg" alt="" id="16" /></div>
+											<div class="col-2"><span class="image fit"><img class="zoom" src="images/signin/blackpanther.jpg" alt="" id="17" /></div>
+										</div>
+									</div>
 
-    <div class="col row right">
-      <table style="width:57%">
-        <tr>
-          <th><button id="10D" class="seat" name="empty" onclick="changeColor('10D')">10D</button></th>
-          <th><button id="10E" class="seat" name="empty" onclick="changeColor('10E')">10E</button></th>
-          <th><button id="10F" class="seat" name="empty" onclick="changeColor('10F')">10F</button></th>
-        </tr>
-        <tr>
-          <th><button id="11D" class="seat" name="empty" onclick="changeColor('11D')">11D</button></th>
-          <th><button id="11E" class="seat" name="empty" onclick="changeColor('11e')">11E</button></th>
-          <th><button id="11F" class="seat" name="empty" onclick="changeColor('11F')">11F</button></th>
-        </tr>
-        <tr>
-          <th><button id="12D" class="seat" name="empty" onclick="changeColor('12D')">12D</button></th>
-          <th><button id="12E" class="seat" name="empty" onclick="changeColor('12E')">12E</button></th>
-          <th><button id="12F" class="seat" name="empty" onclick="changeColor('12C')">12F</button></th>
-        </tr>
-        <tr>
-          <th><button id="13D" class="seat" name="empty" onclick="changeColor('13D')">13D</button></th>
-          <th><button id="13E" class="seat" name="empty" onclick="changeColor('13E')">13E</button></th>
-          <th><button id="13F" class="seat" name="empty" onclick="changeColor('13F')">13F</button></th>
-        </tr>
-        <tr>
-          <th><button id="14D" class="seat" name="empty" onclick="changeColor('14D')">14D</button></th>
-          <th><button id="14E" class="seat" name="empty" onclick="changeColor('14E')">14E</button></th>
-          <th><button id="14F" class="seat" name="empty" onclick="changeColor('14F')">14F</button></th>
-        </tr>
-        <tr>
-          <th><button id="15D" class="seat" name="empty" onclick="changeColor('15D')">15D</button></th>
-          <th><button id="15E" class="seat" name="empty" onclick="changeColor('15E')">15E</button></th>
-          <th><button id="15F" class="seat" name="empty" onclick="changeColor('15F')">15F</button></th>
-        </tr>
-        <tr>
-          <th><button id="16D" class="seat" name="empty" onclick="changeColor('16D')">16D</button></th>
-          <th><button id="16E" class="seat" name="empty" onclick="changeColor('16E')">16E</button></th>
-          <th><button id="16F" class="seat" name="empty" onclick="changeColor('16F')">16F</button></th>
-        </tr>
-        <tr>
-          <th><button id="17D" class="seat" name="empty" onclick="changeColor('17D')">17D</button></th>
-          <th><button id="17E" class="seat" name="empty" onclick="changeColor('17E')">17E</button></th>
-          <th><button id="17F" class="seat" name="empty" onclick="changeColor('17F')">17F</button></th>
-        </tr>
-        <tr>
-          <th><button id="18D" class="seat" name="empty" onclick="changeColor('18D')">18D</button></th>
-          <th><button id="18E" class="seat" name="empty" onclick="changeColor('18E')">18E</button></th>
-          <th><button id="18F" class="seat" name="empty" onclick="changeColor('18F')">18F</button></th>
-        </tr>
-        <tr>
-          <th><button id="19D" class="seat" name="empty" onclick="changeColor('19D')">19D</button></th>
-          <th><button id="19E" class="seat" name="empty" onclick="changeColor('19E')">19E</button></th>
-          <th><button id="19F" class="seat" name="empty" onclick="changeColor('19F')">19F</button></th>
-        </tr>
-        <tr>
-          <th><button id="20D" class="seat" name="empty" onclick="changeColor('20D')">20D</button></th>
-          <th><button id="20E" class="seat" name="empty" onclick="changeColor('20E')">20E</button></th>
-          <th><button id="20F" class="seat" name="empty" onclick="changeColor('20F')">20F</button></th>
-        </tr>
-        <tr>
-          <th><button id="21D" class="seat" name="empty" onclick="changeColor('21D')">21D</button></th>
-          <th><button id="21E" class="seat" name="empty" onclick="changeColor('21E')">21E</button></th>
-          <th><button id="21F" class="seat" name="empty" onclick="changeColor('21F')">21F</button></th>
-        </tr>
-      </table>
-    </div>
-  </body>
+					</div>
 
-  <script type="text/javascript">
-    function changeColor(seatName) {
-      var seat = document.getElementById(seatName);
-      if (seat.name === "empty") {
-        seat.name = "taken";
-        seat.style.background = 'red';
-      } else {
-        seat.name = "empty";
-        seat.style.background = '#44c767';
-      }
-    }
-  </script>
+			</div>
 
+		<!-- Scripts -->
+			<script> // Post Form to Google Sheets
+				const scriptURL = 'https://script.google.com/macros/s/AKfycbzkof_KDcyJp0HoXMhH29hvYOt4UTTfohqhMBzxsBRGZtYZQQVk/exec'
+				const form = document.forms['test-form']
+
+				form.addEventListener('submit', e => {
+					e.preventDefault()
+					fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+						.then(response => console.log('Success!', response))
+						.catch(error => console.error('Error!', error.message))
+				})
+			</script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script>
+				$(document).ready(function(){
+					var seatNum = window.location.href.substring(window.location.href.indexOf("?")+1);
+					document.getElementById("seatNum").value = seatNum;
+					// $("#seat-num").text(seatNum);
+
+					$("#watch").attr("href", "watch.html?" + seatNum);
+					$("#listen").attr("href", "listen.html?" + seatNum);
+					$("#play").attr("href", "play.html?" + seatNum);
+					$("#explore").attr("href", "explore.html?" + seatNum);
+					$("#flight").attr("href", "flight.html?" + seatNum);
+					$("#order").attr("href", "order.html?" + seatNum);
+
+					var isClicked = new Array(17).fill(false);
+					var ct = 0;
+
+					$('#0').click(function(){
+						isClicked[0] = true;
+						checkLogin(isClicked);
+					});
+					$('#1').click(function(){
+						isClicked[1] = true;
+						checkLogin(isClicked);
+					});
+					$('#2').click(function(){
+						isClicked[2] = true;
+						checkLogin(isClicked);
+					});
+					$('#3').click(function(){
+						isClicked[3] = true;
+						checkLogin(isClicked);
+					});
+					$('#4').click(function(){
+						isClicked[4] = true;
+						checkLogin(isClicked);
+					});
+					$('#5').click(function(){
+						isClicked[5] = true;
+						checkLogin(isClicked);
+					});
+					$('#6').click(function(){
+						isClicked[6] = true;
+						checkLogin(isClicked);
+					});
+					$('#7').click(function(){
+						isClicked[7] = true;
+						checkLogin(isClicked);
+					});
+					$('#8').click(function(){
+						isClicked[8] = true;
+						checkLogin(isClicked);
+					});
+					$('#9').click(function(){
+						isClicked[9] = true;
+						checkLogin(isClicked);
+					});
+					$('#10').click(function(){
+						isClicked[10] = true;
+						checkLogin(isClicked);
+					});
+					$('#11').click(function(){
+						isClicked[11] = true;
+						checkLogin(isClicked);
+					});
+					$('#12').click(function(){
+						isClicked[12] = true;
+						checkLogin(isClicked);
+					});
+					$('#13').click(function(){
+						isClicked[13] = true;
+						checkLogin(isClicked);
+					});
+					$('#14').click(function(){
+						isClicked[14] = true;
+						checkLogin(isClicked);
+					});
+					$('#15').click(function(){
+						isClicked[15] = true;
+						checkLogin(isClicked);
+					});
+					$('#16').click(function(){
+						isClicked[16] = true;
+						checkLogin(isClicked);
+					});
+					$('#17').click(function(){
+						isClicked[17] = true;
+						checkLogin(isClicked);
+					});
+
+					function checkLogin(isClicked){
+						ct = 0;
+						for (i in isClicked)
+								if (isClicked[i] == true) {
+									ct++;
+									if (ct == 3) {
+										if ((isClicked[2] ==  true) && (isClicked[7] == true) && (isClicked[12] == true)) {
+											// alert("Welcome!");
+											window.location.replace("welcome.html");
+										} else {
+											alert("Authentication failed!");
+											ct =  0;
+										}
+									}
+								}
+							}
+				});
+
+
+
+			</script>
+
+	</body>
 </html>
