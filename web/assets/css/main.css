@@ -3774,11 +3774,15 @@ input, select, textarea {
 
 /* Main */
 
+	.noScroll {
+		height: 80vh;
+	}
+
 	#main {
 		background-color: #ffffff;
 		position: relative;
 		margin: 0 auto;
-		height: 80vh;
+		
 		width: calc(100% - 4rem);
 		max-width: 72rem;
 		z-index: 2;
@@ -4697,4 +4701,22 @@ input, select, textarea {
 			visibility: visible;
 		}
 
+	}
+	#tableContainer {
+		padding: 1rem 4rem;
+	}
+	#incomingOrders {
+		width: 50%;
+	}
+	#incomingOrders #itemCol {
+		width:60%;
+	}
+	#incomingOrders #seatCol {
+		width:10%;
+	}
+	#incomingOrders #doneCol {
+		width:30%;
+	}
+	#incomingOrders button {
+		width: 100%;
 	}
