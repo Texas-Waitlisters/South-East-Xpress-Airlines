@@ -73,6 +73,14 @@ div#hidden-form {
 	display: none;
 }
 
+.page-iframe {
+	width: 100%;
+	height: 100%;
+}
+.page-scrot {
+	width:100%;
+}
+
 span.icon {
 	font-size: x-large;
 }
