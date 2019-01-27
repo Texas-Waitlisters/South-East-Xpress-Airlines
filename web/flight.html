@@ -31,14 +31,15 @@
 							<li><a id="explore"><span class="icon">🌐</span> EXPLORE</a></li>
 							<li class="active"><a id="flight"><span class="icon">✈</span> THIS FLIGHT</a></li>
 							<li><a id="order"><span class="icon">🛒</span>ORDER</a></li>
+                            <li><a id="seat"><span class="icon">💺</span>SEAT</a></li>
 						</ul>
-						
+
 					</nav>
 
 				<!-- Main -->
 					<div id="main" style="vertical-align: center; text-align: middle">
 
-						<iframe class="page-iframe" src="https://flightaware.com/live/flight/map/CPZ6099/history/20190127/0151Z/KIAH/KLAX"></iframe>			
+						<iframe class="page-iframe" src="https://flightaware.com/live/flight/map/CPZ6099/history/20190127/0151Z/KIAH/KLAX"></iframe>
 					</div>
 
 			</div>
@@ -51,7 +52,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script> 
+			<script>
 				$(document).ready(function(){
 					var seatNum = window.location.href.substring(window.location.href.indexOf("?")+1);
 					// $("#seat-num").text(seatNum);
@@ -62,6 +63,7 @@
 					$("#explore").attr("href", "explore.html?" + seatNum);
 					$("#flight").attr("href", "flight.html?" + seatNum);
 					$("#order").attr("href", "order.html?" + seatNum);
+                    $("#seat").attr("href", "seat.html?" + seatNum);
 				})
 			</script>
 

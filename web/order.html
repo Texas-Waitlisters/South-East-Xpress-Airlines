@@ -33,6 +33,7 @@
 							<li><a id="explore"><span class="icon">🌐</span> EXPLORE</a></li>
 							<li><a id="flight"><span class="icon">✈</span> THIS FLIGHT</a></li>
 							<li class="active"><a id="order"><span class="icon">🛒</span>ORDER</a></li>
+                            <li><a id="seat"><span class="icon">💺</span>SEAT</a></li>
 						</ul>
 
 					</nav>
@@ -111,6 +112,7 @@
 					$("#explore").attr("href", "explore.html?" + seatNum);
 					$("#flight").attr("href", "flight.html?" + seatNum);
 					$("#order").attr("href", "order.html?" + seatNum);
+                    $("#seat").attr("href", "seat.html?" + seatNum);
 
 
 					$('button#submit-form1').click(function(){

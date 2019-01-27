@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Listen | Southeastern Xpress Airlines</title>
+		<title>Elements Reference - Massively by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -26,12 +26,12 @@
 					<nav id="nav">
 						<ul class="links">
 							<li><a id="watch"><span class="icon">📺</span> WATCH</a></li>
-							<li class="active"><a id="listen"><span class="icon">🎵</span> LISTEN</a></li>
+							<li><a id="listen"><span class="icon">🎵</span> LISTEN</a></li>
 							<li><a id="play"><span class="icon">🎮</span> PLAY</a></li>
 							<li><a id="explore"><span class="icon">🌐</span> EXPLORE</a></li>
 							<li><a id="flight"><span class="icon">✈</span> THIS FLIGHT</a></li>
 							<li><a id="order"><span class="icon">🛒</span>ORDER</a></li>
-                            <li><a id="seat"><span class="icon">💺</span>SEAT</a></li>
+                            <li class="active"><a id="seat"><span class="icon">💺</span>SEAT</a></li>
 						</ul>
 
 					</nav>
@@ -41,11 +41,9 @@
 
 						<!-- Post -->
 							<section class="post">
-								<!-- <header class="major">
-								</header> -->
 
 								<!-- Text stuff -->
-									<iframe src="https://spotifycharts.com/regional" width="100%" height="600px"></iframe>
+									<iframe src="index.html" width="100%" height="600px"></iframe>
 
 					</div>
 
@@ -63,7 +61,6 @@
 				$(document).ready(function(){
 					var seatNum = window.location.href.substring(window.location.href.indexOf("?")+1);
 					// $("#seat-num").text(seatNum);
-
 					$("#watch").attr("href", "watch.html?" + seatNum);
 					$("#listen").attr("href", "listen.html?" + seatNum);
 					$("#play").attr("href", "play.html?" + seatNum);

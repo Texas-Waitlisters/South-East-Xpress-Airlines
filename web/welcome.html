@@ -31,8 +31,9 @@
 							<li><a id="explore"><span class="icon">🌐</span> EXPLORE</a></li>
 							<li><a id="flight"><span class="icon">✈</span> THIS FLIGHT</a></li>
 							<li><a id="order"><span class="icon">🛒</span>ORDER</a></li>
+                            <li><a id="seat"><span class="icon">💺</span>SEAT</a></li>
 						</ul>
-						
+
 					</nav>
 
 				<!-- Main -->
@@ -54,9 +55,10 @@
 									<td><button id="explore"><span class="icon">🌐</span> </br>EXPLORE</button></td>
 									<td><button id="flight"><span class="icon">✈</span> </br>THIS FLIGHT</button></td>
 									<td><button id="order"><span class="icon">🛒</span> </br>ORDER</button></td>
+                                    <td><button id="seat"><span class="icon">💺</span> </br>SEAT</button></td>
 								</tr>
-							</table>	
-									
+							</table>
+
 					</div>
 
 			</div>
@@ -84,6 +86,7 @@
 					$("#explore").attr("href", "explore.html?" + seatNum);
 					$("#flight").attr("href", "flight.html?" + seatNum);
 					$("#order").attr("href", "order.html?" + seatNum);
+                    $("#seat").attr("href", "seat.html?" + seatNum);
 
 					$('button#watch').click(function(){ window.location.href='watch.html?' + seatNum;});
 					$('button#listen').click(function(){ window.location.href='listen.html?' + seatNum;});
@@ -91,6 +94,7 @@
 					$('button#explore').click(function(){ window.location.href='explore.html?' + seatNum;});
 					$('button#flight').click(function(){ window.location.href='flight.html?' + seatNum;});
 					$('button#order').click(function(){ window.location.href='order.html?' + seatNum;});
+                    $('button#seat').click(function(){ window.location.href='seat.html?' + seatNum;});
 				});
 
 			</script>

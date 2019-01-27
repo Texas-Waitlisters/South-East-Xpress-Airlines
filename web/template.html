@@ -31,8 +31,9 @@
 							<li><a id="explore"><span class="icon">🌐</span> EXPLORE</a></li>
 							<li><a id="flight"><span class="icon">✈</span> THIS FLIGHT</a></li>
 							<li><a id="order"><span class="icon">🛒</span>ORDER</a></li>
+                            <li><a id="seat"><span class="icon">💺</span>SEAT</a></li>
 						</ul>
-						
+
 					</nav>
 
 				<!-- Main -->
@@ -55,7 +56,7 @@
 									<h2>Heading Level 2</h2>
 									<h3>Heading Level 3</h3>
 									<h4>Heading Level 4</h4>
-									
+
 					</div>
 
 			</div>
@@ -68,7 +69,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script> 
+			<script>
 				$(document).ready(function(){
 					var seatNum = window.location.href.substring(window.location.href.indexOf("?")+1);
 					// $("#seat-num").text(seatNum);
@@ -79,6 +80,7 @@
 					$("#explore").attr("href", "explore.html?" + seatNum);
 					$("#flight").attr("href", "flight.html?" + seatNum);
 					$("#order").attr("href", "order.html?" + seatNum);
+                    $("#seat").attr("href", "seat.html?" + seatNum);
 				})
 			</script>
 
