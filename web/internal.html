@@ -38,6 +38,7 @@
 			</div>
 
 		<!-- Scripts -->
+			<script type="text/javascript" src="assets/js/tabletop.js"></script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -46,10 +47,12 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script>
+
 				$(document).ready(function(){
 					var seatNum = window.location.href.substring(window.location.href.indexOf("?")+1);
 					// $("#seat-num").text(seatNum);
 
+					// Address of the Google Sheets Database
 					$("#watch").attr("href", "watch.html?" + seatNum);
 					$("#listen").attr("href", "listen.html?" + seatNum);
 					$("#play").attr("href", "play.html?" + seatNum);
@@ -57,22 +60,25 @@
 					$("#flight").attr("href", "flight.html?" + seatNum);
 					$("#order").attr("href", "order.html?" + seatNum);
                     $("#seat").attr("href", "seat.html?" + seatNum);
+				});
 
-                    var tempData = [
-					{"item":"coffee", "seat": "33D", "uniqueId":1},
-					{"item":"water", "seat": "34D", "uniqueId":2},
-					{"item":"tea", "seat": "34D", "uniqueId":3},
-					{"item":"coke", "seat": "34D", "uniqueId":4},
-					{"item":"dessert", "seat": "34D", "uniqueId":5},
-					{"item":"juice", "seat": "34D", "uniqueId":6},
-					{"item":"juice", "seat": "3A", "uniqueId":7},
-					{"item":"coffee", "seat": "4B", "uniqueId":8},
-					{"item":"water", "seat": "7E", "uniqueId":9},
-					{"item":"coffee", "seat": "20C", "uniqueId":10}
-					];
+				let public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/14k3zjF9QvAihNV_fIY3C48QyiZj_BJEzOpfJu857dlU/edit?usp=sharing';
+
+				function init() {
+				Tabletop.init( { key: public_spreadsheet_url,
+				                 callback: showInfo,
+				                 simpleSheet: true } );
+				}
+				window.addEventListener("DOMContentLoaded", init)	// Calls method init when Sheets has loaded
+
+				function showInfo(data) {
+					console.log("show");
+					let seat = "seat_num";
+					let item = "menu_item";
+					let order = "order_number";
 					var tableHtml = "<tr><th id='itemCol'>Item</th><th id='seatCol'>Seat</th><th id='doneCol'> </th></tr>\n";
-					for (var index = 0; index < tempData.length; ++index) {
-						tableHtml += "<tr id='row" + index + "'><td id='item" + index + "'>" + tempData[index]["item"] + "</td><td id='seat" + index + "'>" + tempData[index]["seat"] + "</td><td id='doneCol" + index + "'><button id='doneButton" + index + "'>Complete</button></td></tr>\n";
+					for (var index = 0; index < data.length; ++index) {
+						tableHtml += "<tr id='row" + index + "'><td id='item" + index + "'>" + data[index][item] + "</td><td id='seat" + index + "'>" + data[index][seat] + "</td><td id='doneCol" + index + "'><button id='doneButton" + index + "'>Complete</button></td></tr>\n";
 					}
 					document.getElementById("incomingOrders").innerHTML = tableHtml;
 
@@ -82,12 +88,10 @@
 						//Fill out form, save to db
 
 					}
-					for (var index = 0; index < tempData.length; ++index) {
+					for (var index = 0; index < data.length; ++index) {
 						document.getElementById("doneButton" + index).addEventListener("click", markDone, event);
 					}
-				})
-
-
+				}
 				</script>
 
 	</body>
