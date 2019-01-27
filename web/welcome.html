@@ -71,7 +71,11 @@
 			<script src="assets/js/main.js"></script>
 			<script type="application/javascript">
 				$(document).ready(function(){
-					var seatNum = "34D";
+
+					let numColumns = 5;
+					let numRows = 40;
+					var seatNum = Math.floor(Math.random()*numRows+1)+
+						String.fromCharCode(Math.floor(Math.random()*numColumns + 'A'.charCodeAt(0)));
 					$("#seat-num").text(seatNum);
 
 					$("#watch").attr("href", "watch.html?" + seatNum);
@@ -87,7 +91,8 @@
 					$('button#explore').click(function(){ window.location.href='explore.html?' + seatNum;});
 					$('button#flight').click(function(){ window.location.href='flight.html?' + seatNum;});
 					$('button#order').click(function(){ window.location.href='order.html?' + seatNum;});
-				})
+				});
+
 			</script>
 
 	</body>
