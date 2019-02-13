@@ -1,5 +1,5 @@
 var $form = $('form#test-form'),
-    url = 'https://script.google.com/macros/s/AKfycbwp1WGA2NBT-lfK7NN1se-qIX1ffXCHekc_9b5Tvp2YzyR_k4ZE/exec'
+    url = 'https://script.google.com/macros/s/AKfycbw9kc8TD4_yUzUI7XNkH5tjIHYEf4I761zrTufQS_4eEU5L8MY/exec'
 
 
 // $.fn.serializeObject = function()
